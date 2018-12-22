@@ -19,12 +19,13 @@ public class Interactable : MonoBehaviour {
 		bInteracted = false;
 	}
 
-	public virtual void Interact(){
-		//Debug.Log ("Inacterable");
+	public virtual void Interact()
+	{
+		Debug.Log("Interact > " + gameObject.name);
 	}
 
 	void Update(){
-		//Debug.Log (11);
+		//Debug.Log (11 +":"+ player + ":" + bInteracted);
 		if (player != null && !bInteracted) {
 			float _distance = Vector3.Distance (interactionTransform.position, player.position);
 			if (_distance <= radius) {

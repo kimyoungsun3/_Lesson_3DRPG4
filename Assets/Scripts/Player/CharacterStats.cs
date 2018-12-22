@@ -20,6 +20,7 @@ public class CharacterStats : MonoBehaviour {
 	}
 
 	public void TakeDamage(int _damage){
+		Debug.Log("_damage:" + _damage);
 		_damage -= armor.GetValue ();
 		_damage = Mathf.Clamp (_damage, 0, int.MaxValue);
 
@@ -34,6 +35,6 @@ public class CharacterStats : MonoBehaviour {
 	public virtual void Die(){
 		//Die in some way
 		//This method is meant to be overwritten.
-		Debug.Log ("Die");
+		Debug.Log ("Die " + gameObject.name);
 	}
 }

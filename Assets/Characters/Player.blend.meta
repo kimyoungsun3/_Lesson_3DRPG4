@@ -48,6 +48,10 @@ ModelImporter:
     100084: Equipment
     100086: Platebody_001
     100088: Body
+    100090: Hand_Hold_L
+    100092: Hand_Hold_R
+    100094: Shield
+    100096: Sword
     400000: Armature
     400002: Chest
     400004: Cube
@@ -93,6 +97,10 @@ ModelImporter:
     400084: Equipment
     400086: Platebody_001
     400088: Body
+    400090: Hand_Hold_L
+    400092: Hand_Hold_R
+    400094: Shield
+    400096: Sword
     2300000: Cube_001
     2300002: Armour
     3300000: Cube_001
@@ -109,10 +117,18 @@ ModelImporter:
     4300018: Armour
     4300020: Platebody_001
     4300022: Body
+    4300024: Sword
+    4300026: Shield
     7400000: Default Take
     7400002: Idle
     7400004: Run
     7400006: Walk
+    7400008: Grip_left
+    7400010: Grip_right
+    7400012: Combat_idle
+    7400014: Punch
+    7400016: Sword_atk01
+    7400018: Sword_atk02
     9500000: //RootNode
     13700000: Cube
     13700002: Hair
@@ -124,6 +140,8 @@ ModelImporter:
     13700014: Shoes
     13700016: Platebody_001
     13700018: Body
+    13700020: Shield
+    13700022: Sword
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -131,6 +149,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Black
     second: {fileID: 2100000, guid: 35516a8db0fbb47b0a90b9e3d449f3f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blade
+    second: {fileID: 2100000, guid: bff344630875dbc409b0e8e02ad7bbae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blade_highlight
+    second: {fileID: 2100000, guid: 9214367bc8d1e184ba7ff0c33849983d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emblem
+    second: {fileID: 2100000, guid: 127639c8f5d8fe34488aae3e69bdf62a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -146,6 +179,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Metal_001
     second: {fileID: 2100000, guid: ff89cdbf091b94cca97739ad6b3ea5f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_002
+    second: {fileID: 2100000, guid: d37771a2d6a672747860f3425b736620, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -196,6 +234,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Underclothes
     second: {fileID: 2100000, guid: 440813a9200ef43bf8c5e33b84436140, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Underclothes_001
+    second: {fileID: 2100000, guid: 95914718cf0da754c9658c8cfbcc6226, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 222b9762332aa29489748f02daab6a49, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -210,17 +258,26 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Run' has import animation warnings that might
+    animationImportWarnings: "\nClip 'Punch' has import animation warnings that might
       lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
       retargeting quality.\n\t'Chest' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\t'Upper_Leg_L' has scale animation that
-      will be discarded.\n\t'Lower_Leg_L' has scale animation that will be discarded.\n\t'Foot_L'
-      has scale animation that will be discarded.\n\nClip 'Walk' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation DOF
-      on avatar to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'Lower_Leg_L' has scale
-      animation that will be discarded.\n\t'Foot_L' has scale animation that will
-      be discarded.\n"
+      animation that will be discarded.\n\nClip 'Run' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Upper_Leg_L' has scale
+      animation that will be discarded.\n\t'Lower_Leg_L' has scale animation that
+      will be discarded.\n\t'Foot_L' has scale animation that will be discarded.\n\nClip
+      'Sword_atk01' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sword_atk02' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Walk' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Lower_Leg_L'
+      has scale animation that will be discarded.\n\t'Foot_L' has scale animation
+      that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -345,12 +402,181 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Grip_left
+      takeName: Grip_left
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Grip_right
+      takeName: Grip_right
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Combat_idle
+      takeName: Combat_idle
+      firstFrame: 0
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Punch
+      takeName: Punch
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_atk01
+      takeName: Sword_atk01
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword_atk02
+      takeName: Sword_atk02
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1.2
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -375,6 +601,9 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
