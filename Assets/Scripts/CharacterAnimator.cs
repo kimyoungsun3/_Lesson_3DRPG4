@@ -6,13 +6,13 @@ using UnityEngine.AI;
 public class CharacterAnimator : MonoBehaviour
 {
 	const float LOCOMATION_ANIMATION_SMOOTHTIME = 0.1f;
+	public Animator animator;
 
 	public AnimationClip replaceableAttackAnim;			//
 	public AnimationClip[] defaultAttackAnimSet;		//기본 공격.
 	protected AnimationClip[] currentAttackAnimSet;		//현재 적용된 공격.
 
 	NavMeshAgent agent;
-	public Animator animator;
 	int speedPercentHash;
 	protected CharacterCombat combat;
 	protected AnimatorOverrideController overrideController;

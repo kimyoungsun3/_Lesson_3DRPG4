@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000116, guid: fca9f8b14cdbf874a871cb758b87bb2e,
+  m_LightingDataAsset: {fileID: 112000000, guid: fca9f8b14cdbf874a871cb758b87bb2e,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -16178,11 +16178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0107b1a7e83e6d1498149c9b3edb3e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 8032202564851472130}
   replaceableAttackAnim: {fileID: 7400014, guid: b96f12f6108ae4c7c830b53377f99e6c,
     type: 3}
   defaultAttackAnimSet:
   - {fileID: 7400014, guid: b96f12f6108ae4c7c830b53377f99e6c, type: 3}
-  animator: {fileID: 8032202564851472130}
   weaponAnimations:
   - weapon: {fileID: 11400000, guid: 35acf3ba99e06be45afeec067a7bb21d, type: 2}
     clips:

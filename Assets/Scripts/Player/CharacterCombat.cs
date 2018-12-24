@@ -44,6 +44,8 @@ public class CharacterCombat : MonoBehaviour
 		}
 	}
 
+
+
 	IEnumerator DoDamager(CharacterStats _targetStats, float _delay)
 	{
 		//전투 & 자세.
