@@ -22,10 +22,12 @@ public class CharacterAnimator : MonoBehaviour
 		agent = GetComponent<NavMeshAgent> ();
 		speedPercentHash = Animator.StringToHash ("SpeedPercent");
 		combat = GetComponent<CharacterCombat>();
-
+		
 		//AC을 카피한 실시간으로 AOC 만들어둔다.
 		overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
 		animator.runtimeAnimatorController = overrideController;
+
+		transform.Translate(Vector3.up);
 
 		currentAttackAnimSet = defaultAttackAnimSet;
 		combat.onAttack += OnAttack;
