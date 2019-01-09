@@ -27,7 +27,7 @@ public class CharacterAnimator : MonoBehaviour
 		overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
 		animator.runtimeAnimatorController = overrideController;
 
-		transform.Translate(Vector3.up);
+		//transform.Translate(Vector3.up);
 
 		currentAttackAnimSet = defaultAttackAnimSet;
 		combat.onAttack += OnAttack;

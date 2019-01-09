@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour {
+	#region SingleTon
 	public static EquipmentManager ins { get; private set; }
+	void Awake()
+	{
+		ins = this;
+	}
+	#endregion
 
 	//획득한 아이템을 장착...
 	public Equipment[] defaultItems;
@@ -13,9 +19,6 @@ public class EquipmentManager : MonoBehaviour {
 	public delegate void OnEquipmentChanged (Equipment _newItem, Equipment _oldItem);
 	public OnEquipmentChanged onEquipmentChanged;
 
-	void Awake(){
-		ins = this;
-	}
 
 	void Start(){
 		int _len = System.Enum.GetNames (typeof(EquipmentSlot)).Length;
