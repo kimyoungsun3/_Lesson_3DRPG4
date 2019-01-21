@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class ThirdPersonCamera40 : MonoBehaviour {
+public class ThirdPersonCameraPC : MonoBehaviour {
 	public Vector2 ANGLE_MIN_MAX = new Vector2 (5f, +65f);
 	public Vector3 DISTANCE_MIN_MAX = new Vector2 (3f, 15f);
 
@@ -56,6 +55,19 @@ public class ThirdPersonCamera40 : MonoBehaviour {
 			distance -= wheel * sensivityW;// * Time.deltaTime;
 			distance = Mathf.Clamp (distance, DISTANCE_MIN_MAX.x, DISTANCE_MIN_MAX.y);
 		}
+
+		//카메라와 Player 사이에 물체가 있을 경우....
+		// 카메로 <- Player (Rayser발사)
+		Vector3 dirInverse = trans.position - target.position;
+		RaycastHit hitInverse;
+		if(Physics.Raycast(target.position, dirInverse, out hitInverse, distance))
+		{
+			if(hitInverse.collider.gameObject != target.gameObject)
+			{
+				distance = hitInverse.distance;
+			}
+		}
+			
 	}
 
 

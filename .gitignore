@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Scripts/ThirdPersonCamera30.cs
+Assets/Scripts/ThirdPersonCamera30.cs.meta
+Assets/Scripts/ThirdPersonCameraPC.cs
+Assets/Scripts/ThirdPersonCamera30.cs
+Assets/Scripts/ThirdPersonCamera30.cs.meta
+Assets/Scripts/ThirdPersonCameraPC.cs
