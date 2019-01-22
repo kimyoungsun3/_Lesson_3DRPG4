@@ -15,7 +15,7 @@ public class CharacterAnimator : MonoBehaviour
 	NavMeshAgent agent;
 	int speedPercentHash;
 	protected CharacterCombat combat;
-	protected AnimatorOverrideController overrideController;
+	protected AnimatorOverrideController aoc;
 
 	// Use this for initialization
 	protected virtual void Start () {
@@ -24,8 +24,8 @@ public class CharacterAnimator : MonoBehaviour
 		combat = GetComponent<CharacterCombat>();
 		
 		//AC을 카피한 실시간으로 AOC 만들어둔다.
-		overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-		animator.runtimeAnimatorController = overrideController;
+		aoc = new AnimatorOverrideController(animator.runtimeAnimatorController);
+		animator.runtimeAnimatorController = aoc;
 
 		//transform.Translate(Vector3.up);
 
@@ -35,9 +35,9 @@ public class CharacterAnimator : MonoBehaviour
 
 	protected virtual void OnAttack()
 	{
+		int _idxAttack = Random.RandomRange(0, currentAttackAnimSet.Length);
+		aoc[replaceableAttackAnim.name] = currentAttackAnimSet[_idxAttack];
 		animator.SetTrigger("attack");
-		int _idx = Random.RandomRange(0, currentAttackAnimSet.Length);
-		overrideController[replaceableAttackAnim.name] = currentAttackAnimSet[_idx];
 	}
 
 	// Update is called once per frame
