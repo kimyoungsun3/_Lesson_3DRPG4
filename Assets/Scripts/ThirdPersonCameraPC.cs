@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ThirdPersonCameraPC : MonoBehaviour {
 	public Vector2 ANGLE_MIN_MAX = new Vector2 (5f, +65f);
 	public Vector3 DISTANCE_MIN_MAX = new Vector2 (3f, 15f);
@@ -86,7 +85,6 @@ public class ThirdPersonCameraPC : MonoBehaviour {
 			}
 		}
 	}
-
 
 	void LateUpdate(){
 		//move and look.
