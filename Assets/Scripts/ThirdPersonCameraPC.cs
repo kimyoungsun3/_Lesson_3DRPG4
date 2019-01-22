@@ -89,7 +89,7 @@ public class ThirdPersonCameraPC : MonoBehaviour {
 	void LateUpdate(){
 		//move and look.
 		//if (bMove || target.position != targetPosOld) 
-		{
+		{ 
 			bMove = false;
 			dirQ = Quaternion.Euler (angleX, angleY, 0);
 			//Vector3 _pos = target.position + dirQ * Vector3.back * distance;
