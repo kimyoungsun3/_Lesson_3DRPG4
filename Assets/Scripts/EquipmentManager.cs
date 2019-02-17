@@ -25,6 +25,7 @@ public class EquipmentManager : MonoBehaviour {
 		currentEquipment 	= new Equipment[_len];
 		currentMeshes 		= new SkinnedMeshRenderer[_len];
 
+		//Debug.Log( currentEquipment.Length + ":" + currentEquipment[0] );
 		EquipDefaultItems (); //기본 아이템 장착.
 	}
 
@@ -64,6 +65,7 @@ public class EquipmentManager : MonoBehaviour {
 	//아이템 해제.
 	public Equipment Unequip(int _idx){
 		Equipment _oldItem = null;
+		//Debug.Log(_idx + " > [" + currentEquipment[_idx] + "]");
 		if (currentEquipment [_idx] != null) {
 			_oldItem = currentEquipment [_idx];
 			PlayerInventory.ins.Add (_oldItem);
