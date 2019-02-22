@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinBody: {fileID: 352724352}
-  listItem:
+  list_ItemInfo:
   - partKind: 0
     skin: {fileID: 2700611515725089580, guid: cdc789e674bc1a14fa41e0c43853812e, type: 3}
   - partKind: 0
@@ -1236,7 +1236,7 @@ MonoBehaviour:
     skin: {fileID: 5660498806420968127, guid: 6e0a3a25b66012240b4765f75d9b8d40, type: 3}
   - partKind: 4
     skin: {fileID: 4096471490471964324, guid: 28db13c0e792b9741844001cf372b5d0, type: 3}
-  wearParts: []
+  listWear: []
 --- !u!1 &366389496
 GameObject:
   m_ObjectHideFlags: 0

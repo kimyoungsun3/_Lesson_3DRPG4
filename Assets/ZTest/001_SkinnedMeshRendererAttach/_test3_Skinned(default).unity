@@ -1217,59 +1217,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinBody: {fileID: 352724352}
-  listItem:
-  - partKind: 0
+  list_ItemInfo:
+  - name: 
+    itemcode: 1
+    bDefault: 1
     skin: {fileID: 2700611515725089580, guid: cdc789e674bc1a14fa41e0c43853812e, type: 3}
-    bDefault: 1
-  - partKind: 0
+    partKind: 0
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 2
+    bDefault: 0
     skin: {fileID: 2086781185939748473, guid: 7c073239777006041a8247544f14d21c, type: 3}
-    bDefault: 0
-  - partKind: 2
+    partKind: 0
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 3
+    bDefault: 1
     skin: {fileID: 3221693620030868535, guid: d5da74b91fbadb241ae0e324d8c9dd19, type: 3}
-    bDefault: 1
-  - partKind: 1
+    partKind: 2
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 4
+    bDefault: 0
     skin: {fileID: 641180245387824777, guid: c2d28cf75d310be4f94595abe13597e1, type: 3}
+    partKind: 1
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 5
     bDefault: 0
-  - partKind: 2
     skin: {fileID: 6517780967344266633, guid: ca40cefbb5c69bf4fbf517682914820f, type: 3}
+    partKind: 2
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 6
     bDefault: 0
-  - partKind: 5
     skin: {fileID: 4032047484173493852, guid: 3f0a84d35ce3c0e46ab7782ff0b798e7, type: 3}
-    bDefault: 0
-  - partKind: 1
+    partKind: 5
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 7
+    bDefault: 1
     skin: {fileID: 4100445511363081397, guid: 1e9016c003347ae4e931600387f0f58f, type: 3}
+    partKind: 1
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 8
     bDefault: 1
-  - partKind: 3
     skin: {fileID: 5660498806420968127, guid: 6e0a3a25b66012240b4765f75d9b8d40, type: 3}
-    bDefault: 1
-  - partKind: 4
-    skin: {fileID: 4096471490471964324, guid: 28db13c0e792b9741844001cf372b5d0, type: 3}
+    partKind: 3
+    def: 0
+    att: 0
+  - name: 
+    itemcode: 9
     bDefault: 0
-  wearParts:
-  - item:
-      partKind: 0
-      skin: {fileID: 0}
-      bDefault: 0
-  - item:
-      partKind: 0
-      skin: {fileID: 0}
-      bDefault: 0
-  - item:
-      partKind: 0
-      skin: {fileID: 0}
-      bDefault: 0
-  - item:
-      partKind: 0
-      skin: {fileID: 0}
-      bDefault: 0
-  - item:
-      partKind: 0
-      skin: {fileID: 0}
-      bDefault: 0
-  - item:
-      partKind: 0
-      skin: {fileID: 0}
-      bDefault: 0
+    skin: {fileID: 4096471490471964324, guid: 28db13c0e792b9741844001cf372b5d0, type: 3}
+    partKind: 4
+    def: 0
+    att: 0
 --- !u!1 &366389496
 GameObject:
   m_ObjectHideFlags: 0
